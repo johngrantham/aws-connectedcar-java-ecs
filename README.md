@@ -1,1 +1,1 @@
-# aws-connectedcar-java-ecs
+# aws-connectedcar-java-container
