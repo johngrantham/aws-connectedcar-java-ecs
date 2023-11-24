@@ -7,6 +7,8 @@ import javax.ws.rs.core.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.amazonaws.xray.AWSXRay;
+import com.amazonaws.xray.strategy.LogErrorContextMissingStrategy;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 
@@ -33,6 +35,7 @@ public abstract class BaseResources extends ResourceConfig {
 
 	protected BaseResources() {
 	  injector = Guice.createInjector(new NonTracingModule());
+    AWSXRay.getGlobalRecorder().setContextMissingStrategy(new LogErrorContextMissingStrategy());
   }
 
   protected BaseResources(Injector injector) {

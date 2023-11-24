@@ -114,7 +114,6 @@ Resources:
           MetricsEnabled: true
           HttpMethod: '*'
           ResourcePath: '/*'
-      TracingEnabled: true
   CustomerAPI:
     Type: 'AWS::Serverless::Api'
     Properties:
@@ -132,7 +131,6 @@ Resources:
           MetricsEnabled: true
           HttpMethod: '*'
           ResourcePath: '/*'
-      TracingEnabled: true
   VehicleAPI:
     Type: 'AWS::Serverless::Api'
     Properties:
@@ -150,7 +148,6 @@ Resources:
           MetricsEnabled: true
           HttpMethod: '*'
           ResourcePath: '/*'
-      TracingEnabled: true
 Outputs:
   AdminAPI:
     Description: 'The Admin API ID'
